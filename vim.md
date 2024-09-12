@@ -126,6 +126,8 @@ endif
 "" Source your .vimrc
 source ~/.vimrc
 
+" use `sethandler n:vim i:ide` to control all cmd/ctrl shortcuts in normal vs insert modes. refer to sethandler git repo's readme https://github.com/JetBrains/ideavim/wiki/sethandler
+
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
