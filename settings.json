@@ -1,0 +1,324 @@
+{
+  //   "editor.quickSuggestions": {
+  //     "other": true,
+  //     "comments": false,
+  //     "strings": true
+  // },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 125,
+  "vim.handleKeys": {
+    "<C-p>": false,
+    "<C-b>": false,
+    "<C-d>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>",
+        "l"
+      ]
+    },
+    {
+      "before": [
+        "<Esc>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<Leader>",
+        ","
+      ],
+      "commands": [
+        ":noh"
+      ]
+    },
+    {
+      "before": [
+        "<Leader>",
+        "q"
+      ],
+      "commands": [
+        ":quit!"
+      ]
+    },
+  ],
+  "vim.leader": " ",
+  // https://dev.to/ansonh/10-more-vs-code-vim-tricks-to-become-a-faster-coder-ndi#3-multicursor
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "H"
+      ], // Focus previous tab at the left
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ], // Focus next tab at the right
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "Q"
+      ], // Close current tab
+      "after": [
+        "<C-w>",
+        "q"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ], // Focus split window at left
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ], // Focus split window at right
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ], // Focus split window at above
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ], // Focus split window at below
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    {
+      "before": [
+        "|"
+      ], // Split tab vertically
+      "after": [
+        "<C-w>",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "_"
+      ], // Split tab horizontally
+      "after": [
+        "<C-w>",
+        "s"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "`"
+      ], //wrap text with backtick
+      "after": [
+        "y",
+        "s",
+        "i",
+        "w",
+        "`"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "1"
+      ], //insert link template
+      "after": [
+        "i",
+        "[",
+        "]",
+        "(",
+        ")",
+        "<Esc>",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "2"
+      ], //insert link template and paste clipboard into parens, then move cursor to hyperlink text
+      "after": [
+        "i",
+        "[",
+        "]",
+        "(",
+        ")",
+        "<Esc>",
+        "P",
+        "F",
+        "[",
+        "a"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "3"
+      ], //image link template
+      "after": [
+        "i", 
+        "!", "[", "]", "(", ")", "<Esc>",
+        "i",
+        ".", "/", "i", "m", "a", "g", "e", "s", "/",
+      ] //  ![](./images/_)
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ], // Search text
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ], // Search symbol
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "p"
+      ], // Peek Git diff for the changed line
+      "commands": [
+        "editor.action.dirtydiff.next"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "r"
+      ], // Revert hunk
+      "commands": [
+        "git.revertSelectedRanges"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "j"
+      ], // Jump to next Git change
+      "commands": [
+        "workbench.action.editor.nextChange"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "k"
+      ], // Jump to previous Git change
+      "commands": [
+        "workbench.action.editor.previousChange"
+      ]
+    },
+  ],
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "vim.hlsearch": true,
+  "vim.surround": true,
+  // "workbench.colorTheme": "Vim Dark Hard",
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.searchHighlightColor": "rgba(255, 255, 0, 1)",
+  "vim.highlightedyank.textColor": "rgb(0,0,0)",
+  "vim.searchHighlightTextColor": "rgb(0,0,0)",
+  "vim.highlightedyank.color": "rgba(255, 255, 0, 1)",
+  "security.workspace.trust.untrustedFiles": "open",
+  "java.jdt.ls.java.home": "C:\\dev\\java21",
+  "settingsSync.ignoredSettings": [
+    "-java.jdt.ls.java.home"
+  ],
+  // "java.format.settings.url": "~/.vscode/eclipse-java-google-style.xml",
+  "java.format.settings.url": "~/.vscode/intellij-java-google-style.xml",
+  "[java]": {
+    "editor.tabSize": 2,
+  },
+  "editor.mouseWheelZoom": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "explorer.confirmDragAndDrop": false,
+  "editor.lineNumbers": "relative",
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.colorTheme": "Vim Dark Hard",
+  "editor.minimap.enabled": false,
+  "github.copilot.advanced": {},
+  // "emeraldwalk.runonsave": {
+  //     "commands": [
+  //         {
+  //             "match": "\\.java$",
+  //             "cmd": "google-java-format --replace ${file}"
+  //         },
+  //     ],
+  // },
+  // "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml",
+  // "java.format.settings.profile": "GoogleStyle",
+  // // "java.format.settings.imports.onDemand": false,
+  // // "java.format.settings.imports.regexp": "^[a-z.]*",
+  // "[java]": {
+  //     "editor.formatOnSave": true,
+  //     "editor.defaultFormatter": "redhat.java",
+  //     "editor.tabSize": 2
+  // }
+}
